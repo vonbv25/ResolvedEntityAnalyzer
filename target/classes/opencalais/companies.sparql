@@ -1,0 +1,18 @@
+PREFIX c:<http://s.opencalais.com/1/pred/>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	
+	SELECT DISTINCT ?name ?relevance ?resourceEntity ?subject
+	WHERE { 
+		?descriptionA c:docId ?doc .
+		?descriptionA c:subject ?subject . 
+		?descriptionA c:exact ?exact . 
+		?descriptionB c:docId ?doc .
+		?descriptionB c:relevance ?relevance . 
+		?descriptionB c:subject ?subject . 
+		?resourceEntity c:docId ?doc .
+		?resourceEntity c:name ?name . 
+		?resourceEntity c:subject ?subject . 
+		?resourceEntity rdf:type <http://s.opencalais.com/1/type/er/Company> .	
+	} 
+	ORDER BY DESC(?relevance) 
+	LIMIT   10

@@ -1,0 +1,30 @@
+Resolved Entity Analyzer -
+A demo application for using Open Calais with Markup and Resolved Entities.
+
+The application send document to Open Calais with RDF output format. 
+Analyze the entities. and output an xml file containing simplified data 
+gathered from Open Calais and Linked Data.
+-	For the 3 companies (if exist) with highest relevance score - provide the:
+	o	List of competitors (taken from the Linked Data end point)
+	o	List of executives (taken from the Linked Data end point)
+	o	Link to Reuters.com (taken from the Linked Data end point)
+	o	Link to DBpedia (RDF link) (taken from the Linked Data end point)
+	o	Show the Markup entity name 
+	o	Show the resolved entity name
+-	For the 2 geographies (if exist) – provide the following
+	o	Provide Lat and Long (taken from the Linked Data end point)
+	o	Provide link to WikiPedia (taken from the Linked Data end point)
+	o	Provide link to Freebase (taken from the Linked Data end point)
+	o	For cities – provide the state (taken from the Linked Data end point)
+	o	Show the Markup entity name 
+	o	Show the resolved entity name
+-	For products (if exist) – provide the following:
+	o	Full product name (taken from RDF)
+	o	Link to Shopping.com (if exist) (taken from the Linked Data end point)
+	o	Image if exist (taken from the Linked Data end point)
+	o	Show the Markup entity name 
+	o	Show the resolved entity name
+
+Usage: run.bat <OpenCalais license key> <Text File Path>
+Output: output.xml on current folder. 
+
